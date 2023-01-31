@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução</title>
+    <style>
+        .faq-container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .faq-question {
+            background: linear-gradient(to bottom, #add8e6, #87ceeb);
+            color: #333;
+            cursor: pointer;
+            display: block;
+            margin-bottom: 20px;
+            padding: 20px;
+            text-align: left;
+            width: 100%;
+        }
+
+        .faq-question i {
+            float: right;
+            margin-left: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .faq-question.open i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            background: linear-gradient(to bottom, #d3e3f3, #e6f0f5);
+            color: #333;
+            display: none;
+            padding: 20px;
+            text-align: left;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .faq-answer video {
+            width: 80%;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .person-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+            height: 100%;
+        }
+
+
+        .person-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .person-info {
+            text-align: center;
+        }
+
+        .program-photo {
+            width: 200px;
+            height: 200px;
+            margin-right: 20px;
+            border-radius: 10%;
+        }
+
+        .faq-question {
+            background-color: lightblue;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .faq-question::before {
+            content: "\25BC";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .faq-answer {
+            background-color: linear-gradient(to bottom, #fff, #ddd);
+            padding: 10px;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .faq-title {
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+
+        .faq-video-answer video {
+            width: 500px;
+            height: 400px;
+            margin: 20px 0;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .faq-image-answer {
+            display: flex;
+        }
+
+        .faq-image-answer img {
+            max-width: 50%;
+            margin: 0 20px;
+        }
+
+        .faq-card-answer {
+            background-color: #ddd;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            display: inline-block;
+        }
+
+        .faq-card-answer img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+
+        .logos-container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: 20px 0;
+        }
+
+        .logo {
+            text-align: center;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="faq-container">
+        <h1 style="margin-bottom: 40px;">Introdução à programação</h1>
+        <div class="faq-question" onclick="toggleAnswer(this)">
+            Por que ser programador?
+        </div>
+        <div class="faq-answer">
+            <p>De acordo com a code.org, em 5 anos precisaremos de <b>1,5 milhão</b> de programadores, no ritmo atual,
+                teremos
+                <b>menos de 500 mil.</b>
+            </p>
+            <p><b>Principais Vantagens</b></p>
+            <ul>
+                <li>Resolve problemas mais rápido (Fatiamento de problemas)</li>
+                <li>Aprimora a criatividade</li>
+                <li>Aprende a trabalhar em conjunto</li>
+            </ul>
+        </div>
+        <div class="faq-question" onclick="toggleAnswer(this)">
+            Onde aplicamos programação?
+        </div>
+        <div class="faq-answer">
+            <ul>
+                <li>Celulares</li>
+                <li>Robôs de limpeza</li>
+                <li>Alexa</li>
+                <li>Garmin</li>
+                <li>Carros (Tesla)</li>
+            </ul>
+        </div>
+        <div class="faq-question" onclick="toggleAnswer(this)">
+            Convite a aprender programação
+        </div>
+        <div class="faq-answer">
+            <video controls>
+                <source src="media/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="faq-question" onclick="toggleAnswer(this)">
+            Mitos
+        </div>
+        <div class="faq-answer">
+            <ul>
+                <li>Precisa saber inglês?</li>
+                <li>Precisa ser perito em matemática?</li>
+                <li>Não tenho mais idade</li>
+                <li>Sou de outra área, não preciso aprender programação</li>
+            </ul>
+        </div>
+        <div class="faq-question" onclick="toggleAnswer(this)">
+            Maiores obstáculos
+        </div>
+        <div class="faq-answer">
+            <ul>
+                <li>Falta de compromisso</li>
+                <li>Ter pressa (Quer tudo pronto)</li>
+                <li>Praticar pouco</li>
+                <li>Dar pouca importância ao básico</li>
+            </ul>
+        </div>
+        <div class="faq-question" onclick="toggleAnswer(this)">
+            Principais áreas de atuação
+        </div>
+        <div class="faq-answer">
+            <ul>
+                <li>Desktop</li>
+                <li>Web</li>
+                <li>Mobile</li>
+                <li>IOT (internet of things)
+                    <ul>
+                        <li>Netflix</li>
+                        <li>Televisão</li>
+                        <li>Automóvel</li>
+                        <li>Relógio</li>
+                    </ul>
+                </li>
+                <li>Games</li>
+                <li>Analista de dados</li>
+                <li>Engenheiro de inteligência artificial</li>
+            </ul>
+        </div>
+    </div>
+    <div class="faq-container">
+        <h1 style="margin-bottom: 40px;">História da linguagem que aprenderemos</h1>
+
+
+        <div class="faq-question" onclick="toggleAnswer(this)">
+            <i class="arrow down"></i>Quando o python foi criado
+        </div>
+        <div class="faq-answer">
+            <div class="person-card">
+                <img src="media/guido.jpg" class="person-photo">
+                <div class="person-info">
+                    <ul>
+                        <h3>1989</h3>
+                        <h3>Guido Van Hassum (Holanda)</h3>
+                        <h3>CWI (Centro de matemática e ciência da computação)</h3>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-question" onclick="toggleAnswer(this)">
+            <i class="arrow down"></i>Diferença entre linguagens
+        </div>
+        <div class="faq-answer">
+            <div style="display: flex;">
+                <img src="media/codigoC.png" style="flex: 1; margin-right: 10px; object-fit: contain;">
+                <img src="media/codigoPython.png" style="flex: 1; object-fit: contain;">
+            </div>
+        </div>
+
+        <div class="faq-question" onclick="toggleAnswer(this)">
+            <i class="arrow down"></i>Origem do nome python
+        </div>
+        <div class="faq-answer">
+            <div style="display: flex;">
+                <div class="person-card">
+                    <img src="media/montypython.jpg" class="program-photo">
+                    <div class="person-info">
+                        <ul>
+                            <h3>Padrão de nomeação de projetos na CWI:</h3>
+                            <h4>Programa que remeta à Televisão</h4>
+                        </ul>
+                    </div>
+                </div>
+                <div class="person-card">
+                    <img src="media/livropython.jpg" class="program-photo">
+                    <div class="person-info">
+                        <ul>
+                            <h3>Tradição da editora:</h3>
+                            <h4>Todo livro tem um animal na capa</h4>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="faq-question" onclick="toggleAnswer(this)">
+            Para que serve python?
+        </div>
+        <div class="faq-answer">
+            <ul>
+                <li>Automatizar tarefas repetitivas</li>
+                <li>Varrer a internet (web scraping)</li>
+                <li>Construir um site ou uma aplicação para a web;</li>
+                <li>Construir um aplicativo mobile;</li>
+                <li>Criar jogos</li>
+                <li>Criar gráficos para BI</li>
+                <li>Criar ferramentas de Analytics</li>
+                <li>Manipular dados de forma avançada</li>
+                <li>Rodar algoritmos de machine learning</li>
+                <li>Criar aplicações de inteligência artificial</li>
+                <li>Programar microcontroladores e robôs.</li>
+            </ul>
+        </div>
+
+        <div class="faq-question" onclick="toggleAnswer(this)">
+            Quem usa python?
+        </div>
+        <div class="faq-answer">
+            <div class="logos-container">
+                <div class="logo">
+                    <img src="media/google.png" alt="Google">
+                    <p>Google</p>
+                </div>
+                <div class="logo">
+                    <img src="media/instagram.png" alt="Instagram">
+                    <p>Instagram</p>
+                </div>
+                <div class="logo">
+                    <img src="media/netflix.png" alt="Netflix">
+                    <p>Netflix</p>
+                </div>
+            </div>
+            <div class="logos-container">
+                <div class="logo">
+                    <img src="media/pinterest.png" alt="pinterest">
+                    <p>pinterest</p>
+                </div>
+                <div class="logo">
+                    <img src="media/spotify.png" alt="spotify">
+                    <p>spotify</p>
+                </div>
+                <div class="logo">
+                    <img src="media/uber.png" alt="Uber">
+                    <p>Uber</p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <script>
+        function toggleAnswer(element) {
+            var answer = element.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                element.classList.remove("open");
+            } else {
+                answer.style.display = "block";
+                element.classList.add("open");
+            }
+        }
+
+        var slides = document.querySelectorAll(".carousel-slide");
+        var currentSlide = 0;
+
+        function showSlide() {
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slides[currentSlide].classList.add("active");
+        }
+
+        showSlide();
+
+        setInterval(function () {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide();
+        }, 3000);
+
+    </script>
+</body>
+
+</html>
